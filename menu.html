@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Career Quest - Professional Networking Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="menu-page">
+    <div class="menu-container">
+        <!-- Header -->
+        <header class="menu-header">
+            <div class="logo-section">
+                <i class="fab fa-linkedin linkedin-logo"></i>
+                <h1>Career Quest</h1>
+                <p class="tagline">Build Your Professional Future</p>
+            </div>
+        </header>
+
+        <!-- Main Menu -->
+        <main class="menu-main">
+            <div class="menu-cards">
+                <div class="menu-card main-card" onclick="startGame()">
+                    <i class="fas fa-play-circle card-icon"></i>
+                    <h2>Start Career</h2>
+                    <p>Begin your journey from Junior Developer to industry leader</p>
+                    <div class="card-stats">
+                        <span><i class="fas fa-clock"></i> 30+ min gameplay</span>
+                        <span><i class="fas fa-trophy"></i> 6 Achievements</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="continueGame()">
+                    <i class="fas fa-save card-icon"></i>
+                    <h2>Continue</h2>
+                    <p>Resume your saved career progress</p>
+                    <div class="save-info" id="save-info">
+                        <span id="last-save">No saved game</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showTutorial()">
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h2>Tutorial</h2>
+                    <p>Learn the basics of professional networking</p>
+                    <div class="card-features">
+                        <span>• Networking Guide</span>
+                        <span>• Skill Development</span>
+                        <span>• Career Strategy</span>
+                    </div>
+                </div>
+
+                <div class="menu-card" onclick="showProfile()">
+                    <i class="fas fa-user-circle card-icon"></i>
+                    <h2>Profile</h2>
+                    <p>View achievements and career statistics</p>
+                    <div class="profile-preview" id="profile-preview">
+                        <span>Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="menu-footer">
+            <p>Created by <a href="https://github.com/Gzeu" target="_blank">George Pricop</a> | Open Source on GitHub</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>
