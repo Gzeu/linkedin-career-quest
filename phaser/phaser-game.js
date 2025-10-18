@@ -51,17 +51,18 @@ class GameScene extends Phaser.Scene {
     this.ui.btnJob = this.add.text(width - 200, 170, 'Job Hunt', btnStyle).setInteractive({ useHandCursor: true });
     this.ui.btnPost = this.add.text(width - 200, 210, 'Post Content', btnStyle).setInteractive({ useHandCursor: true });
 
-    this.ui.btnNetwork.on('pointerdown', () => { networkEvent(); this.refresh(); });
+    this.ui.btnNetwork.on('pointerdown', () => { networkEvent(); this.fxToast('Networking success'); this.refresh(true); });
     this.ui.btnStudy.on('pointerdown', () => { // pick highest recommendation if exists
       const SkillsAPIRef = window.SkillsAPI ? new window.SkillsAPI() : null;
       if (SkillsAPIRef){
         const recos = SkillsAPIRef.getSkillRecommendations(this.model.player.skills);
-        if (recos.length){ improveSkill(recos[0].skill); } else { this.model.addFeedMessage('No recommendations. Opening picker…'); studySkill(); }
+        if (recos.length){ improveSkill(recos[0].skill); this.fxToast(`Studied ${recos[0].skill}`); }
+        else { this.model.addFeedMessage('No recommendations. Opening picker…'); studySkill(); }
       } else { studySkill(); }
-      this.refresh();
+      this.refresh(true);
     });
-    this.ui.btnJob.on('pointerdown', () => { applyJob(); this.refresh(); });
-    this.ui.btnPost.on('pointerdown', () => { createContent(); this.refresh(); });
+    this.ui.btnJob.on('pointerdown', () => { applyJob(); this.fxToast('Job applied'); this.refresh(true); });
+    this.ui.btnPost.on('pointerdown', () => { createContent(); this.fxToast('Content posted'); this.refresh(true); });
 
     // Update loop
     this.refresh();
@@ -76,16 +77,27 @@ class GameScene extends Phaser.Scene {
       const label = this.add.text(16, y, `${name}: ${data.level}/100`, { fontSize: '16px', color: '#222' });
       const barBg = this.add.rectangle(180, y + 10, 200, 10, 0xe0e0e0).setOrigin(0, 0.5);
       const bar = this.add.rectangle(180, y + 10, Math.max(2, 200 * (data.level/100)), 10, 0x0077b5).setOrigin(0, 0.5);
-      this.ui.skills.push(label, barBg, bar);
+      this.ui.skills.push({ label, barBg, bar, name });
       y += 28;
     });
   }
 
-  refresh(){
+  refresh(animated=false){
     const p = this.model.player;
     this.ui.stats.setText(`Role: ${p.currentRole}  |  Company: ${p.currentCompany}\nConnections: ${p.connections}  •  Influence: ${p.influence}  •  Salary: $${p.salary.toLocaleString()}`);
-    this.renderSkills();
+    // Animate only the bar growth if animated
+    this.ui.skills.forEach(s => s.label.destroy()); // full re-render labels
+    let y = 100;
+    this.ui.skills.forEach(s => {
+      s.label = this.add.text(16, y, `${s.name}: ${this.model.player.skills[s.name].level}/100`, { fontSize: '16px', color: '#222' });
+      const newW = Math.max(2, 200 * (this.model.player.skills[s.name].level/100));
+      if (animated && window.CQFX){ window.CQFX.growBar(this, s.bar, newW); }
+      else s.bar.displayWidth = newW;
+      y += 28;
+    });
   }
+
+  fxToast(msg){ if (window.CQFX){ window.CQFX.toast(this, msg); } }
 }
 
 (function initPhaser(){
