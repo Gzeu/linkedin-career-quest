@@ -1,0 +1,182 @@
+/* Menu Page Styles */
+.menu-page {
+    background: linear-gradient(135deg, #0077b5 0%, #00a0dc 50%, #0077b5 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+}
+
+.logo-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.linkedin-logo {
+    font-size: 4rem;
+    color: #0077b5;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.menu-header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Menu Cards */
+.menu-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.menu-card:hover::before {
+    left: 100%;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.main-card {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(0, 119, 181, 0.1), rgba(255, 255, 255, 0.95));
+    border: 2px solid rgba(0, 119, 181, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #0077b5;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.menu-card h2 {
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.menu-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-stats, .card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-stats span, .card-features span {
+    font-size: 0.9rem;
+    color: #0077b5;
+    font-weight: 500;
+}
+
+.save-info {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer */
+.menu-footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+.menu-footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.menu-footer a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-card {
+        grid-column: span 1;
+    }
+    
+    .menu-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .linkedin-logo {
+        font-size: 3rem;
+    }
+}
