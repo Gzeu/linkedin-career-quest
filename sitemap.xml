@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://gzeu.github.io/linkedin-career-quest/</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://gzeu.github.io/linkedin-career-quest/index.html</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Gzeu/linkedin-career-quest</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Gzeu/linkedin-career-quest/blob/main/README.md</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Gzeu/linkedin-career-quest/blob/main/GAME_INFO.md</loc>
+    <lastmod>2025-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

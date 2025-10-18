@@ -1,0 +1,50 @@
+# LinkedIn Career Quest - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gzeu.github.io/linkedin-career-quest/sitemap.xml
+
+# Game assets
+Allow: /index.html
+Allow: /style.css
+Allow: /script.js
+Allow: /README.md
+Allow: /GAME_INFO.md
+
+# SEO optimization
+Crawl-delay: 1
+
+# Social media bots
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Archive bots
+User-agent: archive.org_bot
+Allow: /
+
+# Disallow admin paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow game resources
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.html$
+Allow: /*.json$
+Allow: /*.xml$
+Allow: /*.txt$

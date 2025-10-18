@@ -1,0 +1,97 @@
+{
+  "name": "linkedin-career-quest",
+  "version": "1.0.0",
+  "description": "Interactive LinkedIn-themed professional networking game with career progression mechanics",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'No build process required - static files ready for deployment'",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir .",
+    "lint:html": "npx htmlhint *.html",
+    "lint:css": "npx stylelint *.css",
+    "lint:js": "npx eslint *.js",
+    "validate": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "test:lighthouse": "npx lighthouse-ci autorun",
+    "optimize:images": "npx imagemin *.{jpg,png,gif,svg} --out-dir=optimized",
+    "analyze:bundle": "npx bundlephobia ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gzeu/linkedin-career-quest.git"
+  },
+  "keywords": [
+    "linkedin",
+    "career",
+    "game",
+    "networking",
+    "professional-development",
+    "simulation",
+    "javascript",
+    "html5",
+    "css3",
+    "web-game",
+    "career-progression",
+    "skill-development",
+    "tech-careers",
+    "gamification",
+    "education"
+  ],
+  "author": {
+    "name": "George Pricop",
+    "email": "pricopgeorge@gmail.com",
+    "url": "https://github.com/Gzeu"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gzeu/linkedin-career-quest/issues"
+  },
+  "homepage": "https://github.com/Gzeu/linkedin-career-quest#readme",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.10.3",
+    "eslint": "^8.50.0",
+    "lighthouse-ci": "^0.12.0",
+    "serve": "^14.2.1",
+    "imagemin-cli": "^7.0.0",
+    "bundlephobia-cli": "^0.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "files": [
+    "index.html",
+    "style.css",
+    "script.js",
+    "README.md",
+    "GAME_INFO.md",
+    "deployment.json"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Gzeu"
+  },
+  "config": {
+    "game": {
+      "title": "LinkedIn Career Quest",
+      "version": "1.0.0",
+      "theme": "professional-networking",
+      "platform": "web",
+      "target_audience": "professionals"
+    },
+    "deployment": {
+      "auto_deploy": true,
+      "environments": ["production", "staging"],
+      "cdn": "enabled",
+      "ssl": "required"
+    }
+  }
+}

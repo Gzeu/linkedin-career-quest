@@ -1,0 +1,232 @@
+{
+  "name": "LinkedIn Career Quest",
+  "description": "Interactive professional networking game with LinkedIn-themed career progression mechanics",
+  "version": "1.0.0",
+  "author": {
+    "name": "George Pricop",
+    "github": "https://github.com/Gzeu",
+    "role": "Blockchain Developer & AI Automation Specialist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gzeu/linkedin-career-quest.git"
+  },
+  "deployment": {
+    "platforms": [
+      {
+        "name": "GitHub Pages",
+        "url": "https://gzeu.github.io/linkedin-career-quest",
+        "config": {
+          "source": "main branch",
+          "path": "/",
+          "custom_domain": null
+        },
+        "status": "ready",
+        "setup_commands": [
+          "Go to repository Settings",
+          "Navigate to Pages section",
+          "Select 'Deploy from a branch'",
+          "Choose 'main' branch and '/ (root)' folder",
+          "Save configuration"
+        ]
+      },
+      {
+        "name": "Vercel",
+        "url": "https://linkedin-career-quest.vercel.app",
+        "config": {
+          "framework": "Other",
+          "build_command": null,
+          "output_directory": "./",
+          "install_command": null
+        },
+        "status": "ready",
+        "setup_commands": [
+          "Connect GitHub repository to Vercel",
+          "Select 'Other' as framework preset",
+          "No build command needed (static files)",
+          "Set output directory to './'",
+          "Deploy automatically"
+        ]
+      },
+      {
+        "name": "Netlify",
+        "url": "https://linkedin-career-quest.netlify.app",
+        "config": {
+          "build_command": "",
+          "publish_directory": "./",
+          "functions_directory": null
+        },
+        "status": "ready",
+        "setup_commands": [
+          "Connect GitHub repository to Netlify",
+          "Leave build command empty",
+          "Set publish directory to './'",
+          "Enable automatic deployments"
+        ]
+      }
+    ]
+  },
+  "technical_specs": {
+    "frontend": {
+      "html": "HTML5 semantic structure",
+      "css": "CSS3 with Flexbox/Grid, animations, responsive design",
+      "javascript": "Vanilla ES6+ with class-based architecture",
+      "icons": "Font Awesome 6.0.0",
+      "fonts": "System fonts (-apple-system, BlinkMacSystemFont)"
+    },
+    "features": {
+      "responsive_design": true,
+      "local_storage": true,
+      "auto_save": true,
+      "cross_browser": true,
+      "mobile_optimized": true,
+      "accessibility": true
+    },
+    "browser_support": {
+      "chrome": "60+",
+      "firefox": "60+",
+      "safari": "12+",
+      "edge": "79+",
+      "mobile": "iOS 12+, Android 7+"
+    }
+  },
+  "game_mechanics": {
+    "core_systems": [
+      "Professional networking simulation",
+      "Skill development progression",
+      "Career advancement pathways",
+      "Achievement unlock system",
+      "Content creation mechanics",
+      "Job application simulation"
+    ],
+    "player_stats": {
+      "connections": "Professional network size (starts at 5)",
+      "influence": "Industry recognition level (starts at 10)",
+      "salary": "Current compensation (starts at $45,000)",
+      "experience": "Progress toward promotion (0-100)",
+      "skills": "Technical and soft skill levels (0-100 each)"
+    },
+    "skill_categories": {
+      "technical": ["JavaScript", "Problem Solving"],
+      "soft_skills": ["Communication", "Project Management"]
+    },
+    "career_levels": [
+      {
+        "title": "Junior Developer",
+        "company": "TechStart Inc.",
+        "salary_range": "$45,000 - $50,000",
+        "requirements": "Entry level"
+      },
+      {
+        "title": "Mid-level Developer",
+        "company": "GrowthTech Solutions",
+        "salary_range": "$60,000 - $70,000",
+        "requirements": "JavaScript: 40+"
+      },
+      {
+        "title": "Senior Developer",
+        "company": "InnovateTech",
+        "salary_range": "$75,000 - $90,000+",
+        "requirements": "Project Management: 50+"
+      }
+    ]
+  },
+  "marketing": {
+    "target_audience": [
+      "Software developers seeking career guidance",
+      "Students learning about professional development",
+      "HR professionals understanding tech career paths",
+      "Gaming enthusiasts interested in simulation games",
+      "LinkedIn users looking for interactive career tools"
+    ],
+    "key_selling_points": [
+      "Realistic career progression simulation",
+      "LinkedIn-inspired professional networking",
+      "Educational value for career development",
+      "Engaging gameplay with meaningful progression",
+      "Free, open-source, and accessible"
+    ],
+    "social_media": {
+      "hashtags": ["#LinkedInGame", "#CareerDevelopment", "#ProfessionalGaming", "#TechCareers", "#Networking"],
+      "platforms": ["LinkedIn", "Twitter", "GitHub", "Reddit", "Discord"]
+    }
+  },
+  "analytics": {
+    "tracking_events": [
+      "Game start",
+      "Skill improvement",
+      "Networking event participation",
+      "Job application submission",
+      "Achievement unlock",
+      "Promotion received",
+      "Content creation",
+      "Game session duration"
+    ],
+    "kpi_metrics": [
+      "Daily active users",
+      "Average session duration",
+      "Achievement completion rate",
+      "Career progression speed",
+      "User retention rate",
+      "Feature usage patterns"
+    ]
+  },
+  "monetization": {
+    "current_model": "Free and open-source",
+    "potential_models": [
+      "Freemium with premium career paths",
+      "Corporate licensing for HR training",
+      "Educational institution subscriptions",
+      "Sponsored content from tech companies",
+      "Premium mentorship features"
+    ]
+  },
+  "roadmap": {
+    "v1.1": {
+      "timeline": "1-2 months",
+      "features": [
+        "Additional career specializations",
+        "Enhanced networking events",
+        "Achievement system expansion",
+        "UI/UX improvements"
+      ]
+    },
+    "v1.5": {
+      "timeline": "3-4 months",
+      "features": [
+        "Multiplayer networking features",
+        "Company reputation system",
+        "Certification pathways",
+        "Advanced analytics dashboard"
+      ]
+    },
+    "v2.0": {
+      "timeline": "6+ months",
+      "features": [
+        "Mobile application",
+        "LinkedIn API integration",
+        "AI-powered career recommendations",
+        "Community features and leaderboards"
+      ]
+    }
+  },
+  "seo": {
+    "keywords": [
+      "linkedin game",
+      "career development game",
+      "professional networking simulation",
+      "tech career progression",
+      "javascript career game",
+      "developer career path",
+      "networking skills training",
+      "professional development tool"
+    ],
+    "meta_description": "Interactive LinkedIn-themed career development game. Build your professional network, develop skills, and advance your tech career through strategic gameplay.",
+    "structured_data": {
+      "type": "WebApplication",
+      "category": "Game/Educational",
+      "applicationCategory": "Professional Development",
+      "operatingSystem": "Web Browser"
+    }
+  }
+}
