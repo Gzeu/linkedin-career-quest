@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Career Quest - Professional Networking Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-left">
+                <i class="fab fa-linkedin"></i>
+                <h1>Career Quest</h1>
+            </div>
+            <div class="header-right">
+                <div class="player-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span id="connections">5</span> Connections
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span id="influence">10</span> Influence
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-dollar-sign"></i>
+                        $<span id="salary">45000</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <!-- Current Position Panel -->
+            <section class="current-position">
+                <div class="position-card">
+                    <h2 id="current-role">Junior Developer</h2>
+                    <p id="current-company">TechStart Inc.</p>
+                    <div class="experience-bar">
+                        <div class="experience-fill" id="experience-fill"></div>
+                        <span class="experience-text">Experience: <span id="experience">0</span>/100</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Panel -->
+            <section class="skills-panel">
+                <h3><i class="fas fa-code"></i> Skills</h3>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Skills will be generated dynamically -->
+                </div>
+            </section>
+
+            <!-- Actions Panel -->
+            <section class="actions-panel">
+                <h3><i class="fas fa-rocket"></i> Actions</h3>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="networkEvent()">
+                        <i class="fas fa-handshake"></i>
+                        <span>Network</span>
+                        <small>Build connections</small>
+                    </button>
+                    <button class="action-btn" onclick="studySkill()">
+                        <i class="fas fa-book"></i>
+                        <span>Study</span>
+                        <small>Improve skills</small>
+                    </button>
+                    <button class="action-btn" onclick="applyJob()">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Job Hunt</span>
+                        <small>Find opportunities</small>
+                    </button>
+                    <button class="action-btn" onclick="createContent()">
+                        <i class="fas fa-pen"></i>
+                        <span>Post Content</span>
+                        <small>Gain visibility</small>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Events Feed -->
+            <section class="events-feed">
+                <h3><i class="fas fa-newspaper"></i> Professional Feed</h3>
+                <div class="feed-container" id="feed-container">
+                    <div class="feed-item">
+                        <i class="fas fa-user-circle"></i>
+                        <p>Welcome to LinkedIn Career Quest! Start building your professional network.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Opportunities Panel -->
+            <section class="opportunities-panel">
+                <h3><i class="fas fa-search"></i> Job Opportunities</h3>
+                <div class="jobs-list" id="jobs-list">
+                    <!-- Job listings will be generated dynamically -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Game Modals -->
+        <div class="modal" id="networkModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('networkModal')">&times;</span>
+                <h2>Networking Event</h2>
+                <p id="networkEventText"></p>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="acceptNetworkEvent()">Connect</button>
+                    <button class="btn-secondary" onclick="declineNetworkEvent()">Skip</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="studyModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('studyModal')">&times;</span>
+                <h2>Choose Skill to Study</h2>
+                <div class="skill-options" id="skill-options">
+                    <!-- Skill options will be generated -->
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="jobModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('jobModal')">&times;</span>
+                <h2 id="jobTitle">Job Application</h2>
+                <div id="jobDetails"></div>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="applyToJob()">Apply Now</button>
+                    <button class="btn-secondary" onclick="closeModal('jobModal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="achievementModal">
+            <div class="modal-content achievement">
+                <span class="close" onclick="closeModal('achievementModal')">&times;</span>
+                <i class="fas fa-trophy achievement-icon"></i>
+                <h2>Achievement Unlocked!</h2>
+                <p id="achievementText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
