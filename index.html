@@ -15,6 +15,9 @@
             <div class="header-left">
                 <i class="fab fa-linkedin"></i>
                 <h1>Career Quest</h1>
+                <button class="menu-btn" onclick="returnToMenu()" title="Return to Menu">
+                    <i class="fas fa-home"></i>
+                </button>
             </div>
             <div class="header-right">
                 <div class="player-stats">
@@ -60,22 +63,22 @@
             <section class="actions-panel">
                 <h3><i class="fas fa-rocket"></i> Actions</h3>
                 <div class="actions-grid">
-                    <button class="action-btn" onclick="networkEvent()">
+                    <button class="action-btn enhanced-hover" onclick="networkEvent()">
                         <i class="fas fa-handshake"></i>
                         <span>Network</span>
                         <small>Build connections</small>
                     </button>
-                    <button class="action-btn" onclick="studySkill()">
+                    <button class="action-btn enhanced-hover" onclick="studySkill()">
                         <i class="fas fa-book"></i>
                         <span>Study</span>
                         <small>Improve skills</small>
                     </button>
-                    <button class="action-btn" onclick="applyJob()">
+                    <button class="action-btn enhanced-hover" onclick="applyJob()">
                         <i class="fas fa-briefcase"></i>
                         <span>Job Hunt</span>
                         <small>Find opportunities</small>
                     </button>
-                    <button class="action-btn" onclick="createContent()">
+                    <button class="action-btn enhanced-hover" onclick="createContent()">
                         <i class="fas fa-pen"></i>
                         <span>Post Content</span>
                         <small>Gain visibility</small>
@@ -108,7 +111,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('networkModal')">&times;</span>
                 <h2>Networking Event</h2>
-                <p id="networkEventText"></p>
+                <div id="networkEventText"></div>
                 <div class="modal-actions">
                     <button class="btn-primary" onclick="acceptNetworkEvent()">Connect</button>
                     <button class="btn-secondary" onclick="declineNetworkEvent()">Skip</button>
@@ -148,6 +151,7 @@
         </div>
     </div>
 
+    <script src="enhanced-features.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
