@@ -1,10 +1,8 @@
-/* Load new integrations */
+/* Load skills integrations and career path selector on menu + game */
 window.addEventListener('load', () => {
-  const script1 = document.createElement('script');
-  script1.src = 'src/api/skills-api.js';
-  document.body.appendChild(script1);
-
-  const script2 = document.createElement('script');
-  script2.src = 'src/integrations/skills-injector.js';
-  document.body.appendChild(script2);
+  const add = (src) => { const s = document.createElement('script'); s.src = src; document.body.appendChild(s); };
+  add('src/api/skills-api.js');
+  add('src/integrations/skills-injector.js');
+  add('src/integrations/career-path-selector.js');
+  add('src/integrations/career-path-hook.js');
 });
